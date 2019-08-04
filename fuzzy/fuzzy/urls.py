@@ -22,4 +22,9 @@ from search import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
+    path('upload_csv/',views.upload_csv,name="upload_csv"),
+    path('autocomplete/',views.autocomplete,name="autocomplete"),
+    path('configure/',views.configure,name="configure"),
+
+
 ]

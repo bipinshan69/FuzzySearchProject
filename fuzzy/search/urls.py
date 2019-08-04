@@ -6,4 +6,7 @@ app_name = 'search'
 
 urlpatterns = [
     path('', views.index,name="index"),
+    path('upload_csv/',views.upload_csv,name="upload_csv"),
+    path('autocomplete/',views.autocomplete,name="autocomplete"),
+
 ]
