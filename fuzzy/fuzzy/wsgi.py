@@ -12,10 +12,4 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fuzzy.settings')
-
-
-from whitenoise import WhiteNoise
 application = get_wsgi_application()
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-application = WhiteNoise(application, root=os.path.join(BASE_DIR, 'staticfiles'))
-application.add_files(os.path.join(BASE_DIR, 'staticfiles'), prefix='more-files/')
